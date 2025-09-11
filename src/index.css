@@ -1,0 +1,130 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Brand Design System - Landing Page System
+All colors MUST be HSL. Brand colors with usage percentages:
+- Blue (#1265CB) — 70% dominance
+- Green (#2C954D) — 80% dominance  
+- Pink (#FD86CE) — 20% accent
+- Lavender (#D2BCE4) — 10% tertiary
+- Orange (#FE5C00) — 10% tertiary
+- Yellow (#FECB02) — 10% tertiary
+- White (#FFFFFF) — text over dark backgrounds
+- Black (#000000) — default background
+*/
+
+@layer base {
+  :root {
+    /* Brand Foundation */
+    --background: 0 0% 0%; /* Black background */
+    --foreground: 0 0% 100%; /* White text */
+
+    /* Brand Color Palette */
+    --brand-blue: 214 82% 44%; /* #1265CB - 70% dominance */
+    --brand-green: 141 52% 45%; /* #2C954D - 80% dominance */
+    --brand-pink: 324 96% 76%; /* #FD86CE - 20% accent */
+    --brand-lavender: 278 45% 81%; /* #D2BCE4 - 10% tertiary */
+    --brand-orange: 20 100% 50%; /* #FE5C00 - 10% tertiary */
+    --brand-yellow: 44 99% 51%; /* #FECB02 - 10% tertiary */
+
+    /* Semantic Color Mapping */
+    --primary: 324 96% 76%; /* Pink for CTAs */
+    --primary-foreground: 0 0% 100%; /* White text on pink */
+
+    --secondary: 214 82% 44%; /* Blue for large areas */
+    --secondary-foreground: 0 0% 100%; /* White text on blue */
+
+    --accent: 141 52% 45%; /* Green for balanced sections */
+    --accent-foreground: 0 0% 100%; /* White text on green */
+
+    --muted: 278 45% 81%; /* Lavender for subtle accents */
+    --muted-foreground: 0 0% 0%; /* Black text on lavender */
+
+    --destructive: 20 100% 50%; /* Orange for warnings */
+    --destructive-foreground: 0 0% 100%; /* White text on orange */
+
+    --card: 0 0% 5%; /* Slightly lighter than background */
+    --card-foreground: 0 0% 100%; /* White text on cards */
+
+    --popover: 0 0% 5%; /* Slightly lighter than background */
+    --popover-foreground: 0 0% 100%; /* White text */
+
+    --border: 0 0% 15%; /* Dark borders */
+    --input: 0 0% 10%; /* Dark input backgrounds */
+    --ring: 324 96% 76%; /* Pink focus rings */
+
+    --radius: 9999px; /* Pill-style buttons */
+
+    /* Sidebar Colors */
+    --sidebar-background: 0 0% 2%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 314 82% 44%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 8%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 10%;
+    --sidebar-ring: 324 96% 76%;
+  }
+
+  .dark {
+    /* Keep same values for dark mode since we're designing for black background */
+    --background: 0 0% 0%;
+    --foreground: 0 0% 100%;
+    --brand-blue: 214 82% 44%;
+    --brand-green: 141 52% 45%;
+    --brand-pink: 324 96% 76%;
+    --brand-lavender: 278 45% 81%;
+    --brand-orange: 20 100% 50%;
+    --brand-yellow: 44 99% 51%;
+    --primary: 324 96% 76%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 214 82% 44%;
+    --secondary-foreground: 0 0% 100%;
+    --accent: 141 52% 45%;
+    --accent-foreground: 0 0% 100%;
+    --muted: 278 45% 81%;
+    --muted-foreground: 0 0% 0%;
+    --destructive: 20 100% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 100%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 100%;
+    --border: 0 0% 15%;
+    --input: 0 0% 10%;
+    --ring: 324 96% 76%;
+    --sidebar-background: 0 0% 2%;
+    --sidebar-foreground: 0 0% 90%;
+    --sidebar-primary: 314 82% 44%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 0 0% 8%;
+    --sidebar-accent-foreground: 0 0% 90%;
+    --sidebar-border: 0 0% 10%;
+    --sidebar-ring: 324 96% 76%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* RTL support */
+  .rtl {
+    direction: rtl;
+  }
+
+  .ltr {
+    direction: ltr;
+  }
+
+  /* Smooth scrolling */
+  html {
+    scroll-behavior: smooth;
+  }
+}
