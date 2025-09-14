@@ -16,7 +16,7 @@ function Hero() {
   }, [titleNumber, titles]);
   return <div className="relative w-full min-h-screen bg-background overflow-visible">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex gap-4 sm:gap-6 md:gap-8 py-16 sm:py-20 lg:py-40 items-center justify-center flex-col">
+        <div className="flex gap-4 sm:gap-6 md:gap-8 py-8 sm:py-12 md:py-16 lg:py-40 items-center justify-center flex-col">
           <div className="flex gap-4 sm:gap-6 flex-col">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl max-w-7xl tracking-tighter text-center font-mada font-bold mx-auto">
               <span className="text-foreground uppercase block mb-1 sm:mb-2">Are you a</span>
