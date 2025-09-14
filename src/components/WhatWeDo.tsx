@@ -27,48 +27,48 @@ function WhatWeDo() {
       >
         WHAT WE DO
       </motion.div>
-      <Gravity gravity={{ x: 0, y: 1 }} className="w-full h-full min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] xl:min-h-[700px]">
+      <Gravity gravity={{ x: 0, y: 1 }} className="w-full h-full min-h-[400px] sm:min-h-[500px] md:min-h-[600px] lg:min-h-[700px] xl:min-h-[800px]">
         {/* Main category chips - extra large size */}
         <MatterBody
           isDraggable
           matterBodyOptions={{ friction: 0.4, restitution: 0.3, density: 0.002 }}
-          x="20%"
-          y="2%"
+          x="15%"
+          y="1%"
         >
-          <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl bg-brand-blue text-white rounded-full cursor-grab active:cursor-grabbing px-8 py-4 font-effra font-bold shadow-lg animate-fade-in">
+          <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl bg-brand-blue text-white rounded-full cursor-grab active:cursor-grabbing px-6 py-3 font-effra font-bold shadow-lg animate-fade-in">
             Brand Strategy & Identity
           </div>
         </MatterBody>
         <MatterBody
           isDraggable
           matterBodyOptions={{ friction: 0.4, restitution: 0.3, density: 0.002 }}
-          x="60%"
-          y="2%"
+          x="65%"
+          y="1%"
           angle={8}
         >
-          <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl bg-brand-green text-white rounded-full cursor-grab active:cursor-grabbing px-8 py-4 font-effra font-bold shadow-lg animate-fade-in">
+          <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl bg-brand-green text-white rounded-full cursor-grab active:cursor-grabbing px-6 py-3 font-effra font-bold shadow-lg animate-fade-in">
             Campaigns & Rollouts
           </div>
         </MatterBody>
         <MatterBody
           isDraggable
           matterBodyOptions={{ friction: 0.4, restitution: 0.3, density: 0.002 }}
-          x="25%"
-          y="10%"
+          x="20%"
+          y="15%"
           angle={-5}
         >
-          <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl bg-brand-pink text-white rounded-full cursor-grab active:cursor-grabbing px-8 py-4 font-effra font-bold shadow-lg animate-fade-in">
+          <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl bg-brand-pink text-white rounded-full cursor-grab active:cursor-grabbing px-6 py-3 font-effra font-bold shadow-lg animate-fade-in">
             Content & Storytelling
           </div>
         </MatterBody>
         <MatterBody
           isDraggable
           matterBodyOptions={{ friction: 0.4, restitution: 0.3, density: 0.002 }}
-          x="65%"
-          y="10%"
+          x="70%"
+          y="15%"
           angle={12}
         >
-          <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl bg-brand-orange text-white rounded-full cursor-grab active:cursor-grabbing px-8 py-4 font-effra font-bold shadow-lg animate-fade-in">
+          <div className="text-lg sm:text-xl md:text-2xl lg:text-3xl bg-brand-orange text-white rounded-full cursor-grab active:cursor-grabbing px-6 py-3 font-effra font-bold shadow-lg animate-fade-in">
             Digital Experience & Presence
           </div>
         </MatterBody>
@@ -77,10 +77,10 @@ function WhatWeDo() {
         <MatterBody
           isDraggable
           matterBodyOptions={{ friction: 0.6, restitution: 0.25, density: 0.0015 }}
-          x="15%"
-          y="18%"
+          x="10%"
+          y="30%"
         >
-          <div className="text-base sm:text-lg md:text-xl bg-brand-blue text-white rounded-full cursor-grab active:cursor-grabbing px-5 py-2.5 font-effra font-medium shadow-md animate-fade-in">
+          <div className="text-sm sm:text-base md:text-lg bg-brand-blue text-white rounded-full cursor-grab active:cursor-grabbing px-4 py-2 font-effra font-medium shadow-md animate-fade-in">
             Business naming
           </div>
         </MatterBody>
@@ -88,18 +88,18 @@ function WhatWeDo() {
           isDraggable
           matterBodyOptions={{ friction: 0.7, restitution: 0.3, density: 0.001 }}
           x="35%"
-          y="21%"
+          y="35%"
           angle={10}
         >
-          <div className="text-sm sm:text-base md:text-lg bg-brand-blue text-white rounded-full cursor-grab active:cursor-grabbing px-4 py-2 font-effra shadow-md animate-fade-in">
+          <div className="text-xs sm:text-sm md:text-base bg-brand-blue text-white rounded-full cursor-grab active:cursor-grabbing px-3 py-1.5 font-effra shadow-md animate-fade-in">
             Logo design & full visual identity
           </div>
         </MatterBody>
         <MatterBody
           isDraggable
           matterBodyOptions={{ friction: 0.8, restitution: 0.35, density: 0.0008 }}
-          x="60%"
-          y="18%"
+          x="65%"
+          y="32%"
         >
           <div className="text-xs sm:text-sm md:text-base bg-brand-blue text-white rounded-full cursor-grab active:cursor-grabbing px-3 py-1.5 font-effra shadow-md animate-fade-in">
             Brand guidelines
@@ -110,11 +110,11 @@ function WhatWeDo() {
         <MatterBody
           isDraggable
           matterBodyOptions={{ friction: 0.6, restitution: 0.28, density: 0.0012 }}
-          x="20%"
-          y="28%"
+          x="15%"
+          y="50%"
           angle={-15}
         >
-          <div className="text-base sm:text-lg md:text-xl bg-brand-green text-white rounded-full cursor-grab active:cursor-grabbing px-5 py-2.5 font-effra font-medium shadow-md animate-fade-in">
+          <div className="text-sm sm:text-base md:text-lg bg-brand-green text-white rounded-full cursor-grab active:cursor-grabbing px-4 py-2 font-effra font-medium shadow-md animate-fade-in">
             Online/offline campaigns
           </div>
         </MatterBody>
@@ -122,7 +122,7 @@ function WhatWeDo() {
           isDraggable
           matterBodyOptions={{ friction: 0.8, restitution: 0.35, density: 0.0008 }}
           x="50%"
-          y="31%"
+          y="55%"
         >
           <div className="text-xs sm:text-sm md:text-base bg-brand-green text-white rounded-full cursor-grab active:cursor-grabbing px-3 py-1.5 font-effra shadow-md animate-fade-in">
             Product/service launches
@@ -131,11 +131,11 @@ function WhatWeDo() {
         <MatterBody
           isDraggable
           matterBodyOptions={{ friction: 0.7, restitution: 0.32, density: 0.001 }}
-          x="75%"
-          y="25%"
+          x="80%"
+          y="45%"
           angle={20}
         >
-          <div className="text-sm sm:text-base md:text-lg bg-brand-green text-white rounded-full cursor-grab active:cursor-grabbing px-4 py-2 font-effra shadow-md animate-fade-in">
+          <div className="text-xs sm:text-sm md:text-base bg-brand-green text-white rounded-full cursor-grab active:cursor-grabbing px-3 py-1.5 font-effra shadow-md animate-fade-in">
             Seasonal promotions
           </div>
         </MatterBody>
@@ -144,30 +144,30 @@ function WhatWeDo() {
         <MatterBody
           isDraggable
           matterBodyOptions={{ friction: 0.7, restitution: 0.3, density: 0.001 }}
-          x="25%"
-          y="38%"
+          x="20%"
+          y="70%"
           angle={5}
         >
-          <div className="text-sm sm:text-base md:text-lg bg-brand-pink text-white rounded-full cursor-grab active:cursor-grabbing px-4 py-2 font-effra shadow-md animate-fade-in">
+          <div className="text-xs sm:text-sm md:text-base bg-brand-pink text-white rounded-full cursor-grab active:cursor-grabbing px-3 py-1.5 font-effra shadow-md animate-fade-in">
             Social media content plan
           </div>
         </MatterBody>
         <MatterBody
           isDraggable
           matterBodyOptions={{ friction: 0.6, restitution: 0.25, density: 0.0015 }}
-          x="55%"
-          y="41%"
+          x="60%"
+          y="75%"
           angle={-10}
         >
-          <div className="text-base sm:text-lg md:text-xl bg-brand-pink text-white rounded-full cursor-grab active:cursor-grabbing px-5 py-2.5 font-effra font-medium shadow-md animate-fade-in">
+          <div className="text-sm sm:text-base md:text-lg bg-brand-pink text-white rounded-full cursor-grab active:cursor-grabbing px-4 py-2 font-effra font-medium shadow-md animate-fade-in">
             Copywriting & brand storytelling
           </div>
         </MatterBody>
         <MatterBody
           isDraggable
           matterBodyOptions={{ friction: 0.8, restitution: 0.35, density: 0.0008 }}
-          x="80%"
-          y="35%"
+          x="85%"
+          y="65%"
         >
           <div className="text-xs sm:text-sm md:text-base bg-brand-pink text-white rounded-full cursor-grab active:cursor-grabbing px-3 py-1.5 font-effra shadow-md animate-fade-in">
             Content production
@@ -178,11 +178,11 @@ function WhatWeDo() {
         <MatterBody
           isDraggable
           matterBodyOptions={{ friction: 0.6, restitution: 0.28, density: 0.0012 }}
-          x="10%"
-          y="48%"
+          x="5%"
+          y="85%"
           angle={15}
         >
-          <div className="text-base sm:text-lg md:text-xl bg-brand-orange text-white rounded-full cursor-grab active:cursor-grabbing px-5 py-2.5 font-effra font-medium shadow-md animate-fade-in">
+          <div className="text-sm sm:text-base md:text-lg bg-brand-orange text-white rounded-full cursor-grab active:cursor-grabbing px-4 py-2 font-effra font-medium shadow-md animate-fade-in">
             UX/UI design & strategy
           </div>
         </MatterBody>
@@ -190,17 +190,17 @@ function WhatWeDo() {
           isDraggable
           matterBodyOptions={{ friction: 0.7, restitution: 0.3, density: 0.001 }}
           x="40%"
-          y="51%"
+          y="90%"
         >
-          <div className="text-sm sm:text-base md:text-lg bg-brand-orange text-white rounded-full cursor-grab active:cursor-grabbing px-4 py-2 font-effra shadow-md animate-fade-in">
+          <div className="text-xs sm:text-sm md:text-base bg-brand-orange text-white rounded-full cursor-grab active:cursor-grabbing px-3 py-1.5 font-effra shadow-md animate-fade-in">
             Website & landing page development
           </div>
         </MatterBody>
         <MatterBody
           isDraggable
           matterBodyOptions={{ friction: 0.8, restitution: 0.35, density: 0.0008 }}
-          x="70%"
-          y="45%"
+          x="75%"
+          y="80%"
           angle={-20}
         >
           <div className="text-xs sm:text-sm md:text-base bg-brand-orange text-white rounded-full cursor-grab active:cursor-grabbing px-3 py-1.5 font-effra shadow-md animate-fade-in">
@@ -210,11 +210,11 @@ function WhatWeDo() {
         <MatterBody
           isDraggable
           matterBodyOptions={{ friction: 0.6, restitution: 0.25, density: 0.0015 }}
-          x="30%"
-          y="61%"
+          x="25%"
+          y="105%"
           angle={8}
         >
-          <div className="text-base sm:text-lg md:text-xl bg-brand-orange text-white rounded-full cursor-grab active:cursor-grabbing px-5 py-2.5 font-effra font-medium shadow-md animate-fade-in">
+          <div className="text-sm sm:text-base md:text-lg bg-brand-orange text-white rounded-full cursor-grab active:cursor-grabbing px-4 py-2 font-effra font-medium shadow-md animate-fade-in">
             Interactive prototypes
           </div>
         </MatterBody>
