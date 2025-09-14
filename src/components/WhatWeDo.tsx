@@ -23,11 +23,11 @@ function WhatWeDo() {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="pt-20 pb-6 text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-foreground w-full text-center font-mada font-bold uppercase tracking-wide"
+        className="pt-12 sm:pt-16 md:pt-20 pb-4 sm:pb-6 text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-foreground w-full text-center font-mada font-bold uppercase tracking-wide px-4"
       >
         WHAT WE DO
       </motion.div>
-      <Gravity gravity={{ x: 0, y: 1 }} className="w-full h-full min-h-[700px]">
+      <Gravity gravity={{ x: 0, y: 1 }} className="w-full h-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px]">
         {/* Main category chips - extra large size */}
         <MatterBody
           isDraggable
