@@ -18,7 +18,9 @@ const formSchema = z.object({
   email: z.string().email({
     message: "Please enter a valid email address."
   }),
-  phone: z.string().optional(),
+  phone: z.string().regex(/^05\d{8}$/, {
+    message: "Phone number must start with 05 and be exactly 10 digits."
+  }).optional().or(z.literal("")),
   company: z.string().optional(),
   message: z.string().min(10, {
     message: "Please tell us more about your project (minimum 10 characters)."
