@@ -320,7 +320,7 @@ const ContactForm = () => {
                 }) => <FormItem>
                         <FormLabel className="text-white font-effra text-base">Tell us about your project *</FormLabel>
                         <FormControl>
-                          <Textarea placeholder="Describe your project, goals, and how we can help you..." {...field} className="bg-card border-border text-white placeholder:text-muted-foreground font-effra min-h-[120px] resize-none" />
+                          <Textarea placeholder="Describe your project, goals, and how we can help you..." {...field} className="bg-card border-border text-foreground placeholder:text-muted-foreground font-effra min-h-[140px] pt-4 resize-none" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>} />
