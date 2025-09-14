@@ -17,7 +17,7 @@ function WhatWeDo() {
     <motion.section 
       ref={containerRef}
       style={{ y, opacity }}
-      className="w-full min-h-screen flex flex-col relative bg-background"
+      className="w-full min-h-[60vh] sm:min-h-[70vh] md:min-h-screen flex flex-col relative bg-background"
     >
       <motion.div 
         initial={{ opacity: 0, y: 30 }}
@@ -27,7 +27,7 @@ function WhatWeDo() {
       >
         WHAT WE DO
       </motion.div>
-      <Gravity gravity={{ x: 0, y: 1 }} className="w-full h-full min-h-[500px] sm:min-h-[600px] md:min-h-[700px]">
+      <Gravity gravity={{ x: 0, y: 1 }} className="w-full h-full min-h-[300px] sm:min-h-[400px] md:min-h-[500px] lg:min-h-[600px] xl:min-h-[700px]">
         {/* Main category chips - extra large size */}
         <MatterBody
           isDraggable
