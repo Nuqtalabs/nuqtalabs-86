@@ -10,6 +10,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { useToast } from '@/components/ui/use-toast';
 import { Phone, Mail } from 'lucide-react';
+import { supabase } from '@/integrations/supabase/client';
 const formSchema = z.object({
   name: z.string().min(2, {
     message: "Name must be at least 2 characters."
@@ -17,8 +18,9 @@ const formSchema = z.object({
   email: z.string().email({
     message: "Please enter a valid email address."
   }),
+  phone: z.string().optional(),
   company: z.string().optional(),
-  project: z.string().min(10, {
+  message: z.string().min(10, {
     message: "Please tell us more about your project (minimum 10 characters)."
   })
 });
@@ -32,23 +34,44 @@ const ContactForm = () => {
     defaultValues: {
       name: "",
       email: "",
+      phone: "",
       company: "",
-      project: ""
+      message: ""
     }
   });
   const onSubmit = async (values: z.infer<typeof formSchema>) => {
     setIsSubmitting(true);
 
-    // Simulate form submission
-    setTimeout(() => {
-      console.log(values);
+    try {
+      const { error } = await supabase
+        .from('contact_submissions')
+        .insert({
+          name: values.name,
+          email: values.email,
+          phone: values.phone ? parseFloat(values.phone) : null,
+          company: values.company || null,
+          message: values.message
+        });
+
+      if (error) {
+        throw error;
+      }
+
       toast({
-        title: "Message sent!",
+        title: "Message sent successfully!",
         description: "We'll get back to you within 24 hours."
       });
       form.reset();
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Error sending message",
+        description: "Please try again or contact us directly.",
+        variant: "destructive"
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 2000);
+    }
   };
   return <section className="min-h-screen bg-background flex flex-col items-center justify-center relative py-20">
       <div className="container mx-auto px-4">
@@ -244,6 +267,29 @@ const ContactForm = () => {
               }} viewport={{
                 once: true
               }}>
+                  <FormField control={form.control} name="phone" render={({
+                  field
+                }) => <FormItem>
+                        <FormLabel className="text-white font-effra text-base">Phone Number</FormLabel>
+                        <FormControl>
+                          <Input type="tel" placeholder="Your phone number" {...field} className="bg-card border-border text-white placeholder:text-muted-foreground font-effra h-12" />
+                        </FormControl>
+                        <FormMessage />
+                      </FormItem>} />
+                </motion.div>
+
+                <motion.div initial={{
+                opacity: 0,
+                y: 20
+              }} whileInView={{
+                opacity: 1,
+                y: 0
+              }} transition={{
+                duration: 0.5,
+                delay: 1.4
+              }} viewport={{
+                once: true
+              }}>
                   <FormField control={form.control} name="company" render={({
                   field
                 }) => <FormItem>
@@ -263,11 +309,11 @@ const ContactForm = () => {
                 y: 0
               }} transition={{
                 duration: 0.5,
-                delay: 1.4
+                delay: 1.6
               }} viewport={{
                 once: true
               }}>
-                  <FormField control={form.control} name="project" render={({
+                  <FormField control={form.control} name="message" render={({
                   field
                 }) => <FormItem>
                         <FormLabel className="text-white font-effra text-base">Tell us about your project *</FormLabel>
@@ -286,7 +332,7 @@ const ContactForm = () => {
                 y: 0
               }} transition={{
                 duration: 0.5,
-                delay: 1.6
+                delay: 1.8
               }} viewport={{
                 once: true
               }}>
