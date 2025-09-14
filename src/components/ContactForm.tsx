@@ -20,7 +20,7 @@ const formSchema = z.object({
   }),
   phone: z.string().regex(/^05\d{8}$/, {
     message: "Phone number must start with 05 and be exactly 10 digits."
-  }).optional().or(z.literal("")),
+  }),
   company: z.string().optional(),
   message: z.string().min(10, {
     message: "Please tell us more about your project (minimum 10 characters)."
@@ -272,7 +272,7 @@ const ContactForm = () => {
                   <FormField control={form.control} name="phone" render={({
                   field
                 }) => <FormItem>
-                        <FormLabel className="text-white font-effra text-base">Phone Number</FormLabel>
+                        <FormLabel className="text-white font-effra text-base">Phone Number *</FormLabel>
                         <FormControl>
                           <Input type="tel" placeholder="Your phone number" {...field} className="bg-card border-border text-white placeholder:text-muted-foreground font-effra h-12" />
                         </FormControl>
