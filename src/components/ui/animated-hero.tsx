@@ -34,7 +34,7 @@ function Hero() {
               } : {
                 y: titleNumber > index ? -150 : 150,
                 opacity: 0
-              }} className="absolute font-bold text-brand-green uppercase text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-center">
+              }} className="absolute font-bold text-brand-green uppercase text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-center">
                     {title}
                   </motion.span>)}
               </span>
