@@ -2,16 +2,17 @@ import { MagicText } from "@/components/ui/magic-text"
 
 const NuqtaAbout = () => {
   return (
-    <section className="min-h-screen bg-background flex flex-col items-center justify-center relative">
+    <section className="min-h-screen bg-background flex flex-col items-center justify-center relative" role="main" aria-labelledby="about-heading">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col space-y-3 sm:space-y-4 max-w-4xl mx-auto">
           {/* Blue text - center aligned */}
           <div className="text-brand-blue text-center">
+            <h2 id="about-heading" className="sr-only">About Nuqta Labs</h2>
             <MagicText text="We are Nuqta Labs" />
           </div>
           
-          {/* White text - left aligned */}
-          <div className="text-white text-sm sm:text-base md:text-lg font-effra leading-relaxed text-left px-2 sm:px-0">
+          {/* White text - center aligned on mobile, left on larger screens */}
+          <div className="text-white text-sm sm:text-base md:text-lg font-effra leading-relaxed text-center sm:text-left px-2 sm:px-0">
             <MagicText text="We turn ideas into brands built to grow. We work where strategy meets creativity, shaping identities that stand out. We know the culture you're part of and the markets you want to reach. We give brands clarity, tools, and momentum to move forward with confidence." />
           </div>
           
@@ -26,8 +27,8 @@ const NuqtaAbout = () => {
           </div>
         </div>
       </div>
-      <div className="absolute bottom-10 left-1/2 -translate-x-1/2">
-        <p className="text-muted-foreground animate-bounce">Scroll Down</p>
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 text-center">
+        <p className="text-muted-foreground animate-bounce" aria-live="polite">Scroll Down</p>
       </div>
     </section>
   )

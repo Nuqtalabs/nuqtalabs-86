@@ -19,7 +19,7 @@ function Hero() {
         <div className="flex gap-4 sm:gap-6 md:gap-8 py-8 sm:py-12 md:py-16 lg:py-40 items-center justify-center flex-col">
           <div className="flex gap-4 sm:gap-6 flex-col">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl max-w-7xl tracking-tighter text-center font-mada font-bold mx-auto">
-              <span className="text-foreground uppercase block mb-1 sm:mb-2">Are you a</span>
+              <span className="text-foreground uppercase block mb-1 sm:mb-2 text-center">Are you a</span>
               <span className="relative flex w-full justify-center text-center md:pb-4 md:pt-1 min-w-fit h-12 sm:h-14 md:h-16 lg:h-20 overflow-visible">
                 &nbsp;
                 {titles.map((title, index) => <motion.span key={index} initial={{
@@ -34,30 +34,31 @@ function Hero() {
               } : {
                 y: titleNumber > index ? -150 : 150,
                 opacity: 0
-              }} className="absolute font-bold text-brand-green uppercase text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl">
+              }} className="absolute font-bold text-brand-green uppercase text-xs sm:text-sm md:text-base lg:text-lg xl:text-xl text-center">
                     {title}
                   </motion.span>)}
               </span>
             </h1>
 
-            <div className="text-center space-y-1 sm:space-y-2 max-w-2xl px-2 sm:px-4">
-              <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-effra text-foreground/70">
+            <div className="text-center space-y-1 sm:space-y-2 max-w-2xl px-2 sm:px-4 mx-auto">
+              <p className="text-base sm:text-lg md:text-xl lg:text-2xl font-effra text-foreground/70 text-center">
                 This is your starting Nuqta.
               </p>
-              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-mada font-semibold text-slate-50">
+              <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-mada font-semibold text-slate-50 text-center">
                 Nuqta Labs
               </p>
-              <p className="text-sm sm:text-base md:text-lg lg:text-xl font-effra italic text-brand-green/80">
+              <p className="text-sm sm:text-base md:text-lg lg:text-xl font-effra italic text-brand-green/80 text-center">
                 where ideas begin, where brands grow.
               </p>
             </div>
           </div>
-          <div className="flex justify-center">
-            <a href="#contact-us">
-              <Button size="lg" className="font-effra font-medium">
+          <div className="flex justify-center w-full">
+            <a href="#contact-us" aria-label="Contact us to start your project">
+              <Button size="lg" className="font-effra font-medium" aria-describedby="cta-description">
                 Let's Make It Real
               </Button>
             </a>
+            <span id="cta-description" className="sr-only">Navigate to contact form to start your project with Nuqta Labs</span>
           </div>
         </div>
       </div>
