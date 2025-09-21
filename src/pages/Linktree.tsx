@@ -31,42 +31,42 @@ const Index = () => {
           <div className="space-y-4">
             <LinkButton
               href="https://www.instagram.com/nuqtalabs/"
-              icon={<InstagramIcon size={32} />}
+              icon={<InstagramIcon size={20} />}
               title="Instagram"
               subtitle="@nuqtalabs"
             />
 
             <LinkButton
               href="https://www.linkedin.com/company/nuqtalabs/"
-              icon={<Linkedin color="#0077B5" size={32} />}
+              icon={<Linkedin color="#0077B5" size={20} />}
               title="LinkedIn"
               subtitle="@Nuqtalabs"
             />
 
             <LinkButton
               href="https://nuqtalabs.com"
-              icon={<Globe color="#10B981" size={32} />}
+              icon={<Globe color="#10B981" size={20} />}
               title="Website"
               subtitle="nuqtalabs.com"
             />
 
             <LinkButton
               href="tel:+966920015795"
-              icon={<Phone color="#059669" size={32} />}
+              icon={<Phone color="#06B6D4" size={20} />}
               title="Call"
               subtitle="+966 920 015 795"
             />
 
             <LinkButton
               href="https://api.whatsapp.com/send?phone=966920015795"
-              icon={<WhatsAppIcon size={32} />}
+              icon={<WhatsAppIcon size={20} />}
               title="WhatsApp"
               subtitle="+966 920 015 795"
             />
 
             <LinkButton
               href="mailto:info@nuqtalabs.com"
-              icon={<Mail color="#DC2626" size={32} />}
+              icon={<Mail color="#EF4444" size={20} />}
               title="Email"
               subtitle="info@nuqtalabs.com"
             />
