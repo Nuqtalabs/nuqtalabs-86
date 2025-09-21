@@ -17,7 +17,7 @@ const Index = () => {
             <img 
               src={nuqtaLabsLogo} 
               alt="Nuqta Labs" 
-              className="w-32 h-32 mx-auto mb-4 object-contain"
+              className="w-48 h-48 mx-auto mb-4 object-contain"
             />
             <h1 className="text-2xl font-bold text-white mb-2">
               Nuqta Labs
