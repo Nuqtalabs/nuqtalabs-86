@@ -2,7 +2,6 @@ import { Hero } from '@/components/ui/animated-hero';
 import { NuqtaAbout } from '@/components/NuqtaAbout';
 import { WhatWeDo } from '@/components/WhatWeDo';
 import { BrandFocus } from '@/components/BrandFocus';
-import { ContactForm } from '@/components/ContactForm';
 import { Footer } from '@/components/Footer';
 import { Navigation } from '@/components/Navigation';
 
@@ -19,9 +18,6 @@ const Index = () => {
           <WhatWeDo />
         </div>
         <BrandFocus />
-        <div id="contact-us">
-          <ContactForm />
-        </div>
         <Footer />
       </main>
     </>
