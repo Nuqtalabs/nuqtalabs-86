@@ -14,7 +14,7 @@ export const LinkButton: React.FC<LinkButtonProps> = ({ href, icon, title, subti
     <Button
       asChild
       variant="ghost"
-      className="w-full h-auto p-6 justify-between bg-gray-900/90 backdrop-blur-sm border border-gray-800/60 hover:bg-gray-800/90 transition-all duration-200 rounded-3xl group"
+      className="w-full h-auto p-4 justify-between bg-gray-900/90 backdrop-blur-sm border border-gray-800/60 hover:bg-gray-800/90 transition-all duration-200 rounded-xl group"
     >
       <a href={href} target="_blank" rel="noopener noreferrer">
         <div className="flex items-center gap-4">
