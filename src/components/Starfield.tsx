@@ -18,47 +18,57 @@ export const Starfield = () => {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
 
-    const stars: Array<{ x: number; y: number; radius: number; opacity: number }> = [];
-    const numStars = 100;
+    const stars: Array<{ x: number; y: number; radius: number }> = [];
+    const numStars = 200;
 
-    // Initialize stars
+    // Initialize stars with different sizes - similar to lavad.agency
     for (let i = 0; i < numStars; i++) {
       stars.push({
         x: Math.random() * canvas.width,
         y: Math.random() * canvas.height,
-        radius: Math.random() * 1.5,
-        opacity: Math.random()
+        radius: Math.random() * 2 + 0.5, // Different sizes from 0.5 to 2.5px
       });
     }
 
-    const animate = () => {
+    const draw = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       
       stars.forEach(star => {
         ctx.beginPath();
         ctx.arc(star.x, star.y, star.radius, 0, 2 * Math.PI);
-        ctx.fillStyle = `rgba(255, 255, 255, ${star.opacity})`;
+        ctx.fillStyle = '#ffffff';
         ctx.fill();
-        
-        // Twinkling effect
-        star.opacity += (Math.random() - 0.5) * 0.02;
-        star.opacity = Math.max(0, Math.min(1, star.opacity));
       });
-
-      requestAnimationFrame(animate);
     };
 
-    animate();
+    draw();
+
+    // Redraw on resize
+    const handleResize = () => {
+      resizeCanvas();
+      // Regenerate stars for new canvas size
+      stars.length = 0;
+      for (let i = 0; i < numStars; i++) {
+        stars.push({
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          radius: Math.random() * 2 + 0.5,
+        });
+      }
+      draw();
+    };
+
+    window.addEventListener('resize', handleResize);
 
     return () => {
-      window.removeEventListener('resize', resizeCanvas);
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
   return (
     <canvas
       ref={canvasRef}
-      className="fixed inset-0 w-full h-full pointer-events-none bg-gray-900"
+      className="fixed inset-0 w-full h-full pointer-events-none bg-black"
     />
   );
 };
