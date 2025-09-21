@@ -1,83 +1,87 @@
-import { Navigation } from '@/components/Navigation';
-import { Footer } from '@/components/Footer';
-import { Button } from '@/components/ui/button';
-import { Card } from '@/components/ui/card';
-import { ExternalLink, Instagram, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Linkedin, Globe, Phone, Mail } from 'lucide-react';
+import { Starfield } from '@/components/Starfield';
+import { LinkButton } from '@/components/LinkButton';
+import { InstagramIcon } from '@/components/icons/InstagramIcon';
+import { WhatsAppIcon } from '@/components/icons/WhatsAppIcon';
+import nuqtaLabsLogo from '@/assets/nuqta-labs-logo-new.png';
 
-const Linktree = () => {
-  const links = [
-    {
-      title: "Website",
-      url: "/",
-      icon: <ExternalLink className="w-5 h-5" />,
-      description: "Visit our main website"
-    },
-    {
-      title: "Contact Us",
-      url: "/contact",
-      icon: <Mail className="w-5 h-5" />,
-      description: "Get in touch with our team"
-    },
-    {
-      title: "Instagram",
-      url: "#",
-      icon: <Instagram className="w-5 h-5" />,
-      description: "Follow us on Instagram"
-    },
-    {
-      title: "Twitter",
-      url: "#",
-      icon: <Twitter className="w-5 h-5" />,
-      description: "Follow us on Twitter"
-    },
-    {
-      title: "LinkedIn",
-      url: "#",
-      icon: <Linkedin className="w-5 h-5" />,
-      description: "Connect with us on LinkedIn"
-    }
-  ];
-
+const Index = () => {
   return (
-    <>
-      <Navigation />
-      <main id="main-content" className="min-h-screen py-20">
-        <div className="container mx-auto px-4 max-w-md">
+    <div className="min-h-screen relative">
+      <Starfield />
+      
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4 py-8">
+        <div className="w-full max-w-md mx-auto space-y-6">
+          {/* Logo */}
           <div className="text-center mb-8">
-            <div className="w-24 h-24 bg-gradient-to-br from-primary to-primary/60 rounded-full mx-auto mb-4 flex items-center justify-center">
-              <span className="text-2xl font-bold text-white">N</span>
-            </div>
-            <h1 className="text-2xl font-bold text-foreground mb-2">Nuqta</h1>
-            <p className="text-muted-foreground">Your gateway to all our platforms</p>
+            <img 
+              src={nuqtaLabsLogo} 
+              alt="Nuqta Labs" 
+              className="w-52 h-52 mx-auto mb-4 object-contain filter brightness-110 mix-blend-screen bg-transparent"
+            />
+            <h1 className="text-2xl font-bold text-foreground mb-2">
+              Nuqta Labs
+            </h1>
+            <p className="text-muted-foreground text-sm">
+              Connect with us across all platforms
+            </p>
           </div>
 
+          {/* Social Links */}
           <div className="space-y-4">
-            {links.map((link, index) => (
-              <Card key={index} className="p-1 hover:shadow-lg transition-shadow">
-                <Button
-                  variant="ghost"
-                  className="w-full h-auto p-4 justify-start text-left"
-                  asChild
-                >
-                  <a href={link.url} className="flex items-center gap-4">
-                    <div className="flex-shrink-0 w-10 h-10 bg-primary/10 rounded-full flex items-center justify-center">
-                      {link.icon}
-                    </div>
-                    <div className="flex-1">
-                      <h3 className="font-semibold text-foreground">{link.title}</h3>
-                      <p className="text-sm text-muted-foreground">{link.description}</p>
-                    </div>
-                    <ExternalLink className="w-4 h-4 text-muted-foreground" />
-                  </a>
-                </Button>
-              </Card>
-            ))}
+            <LinkButton
+              href="https://www.instagram.com/nuqtalabs/"
+              icon={<InstagramIcon size={24} />}
+              title="Instagram"
+              subtitle="@nuqtalabs"
+            />
+
+            <LinkButton
+              href="https://www.linkedin.com/company/nuqtalabs/"
+              icon={<Linkedin color="#0077B5" />}
+              title="LinkedIn"
+              subtitle="@Nuqtalabs"
+            />
+
+            <LinkButton
+              href="https://nuqtalabs.com"
+              icon={<Globe color="#10B981" />}
+              title="Website"
+              subtitle="nuqtalabs.com"
+            />
+
+            <LinkButton
+              href="tel:+966920015795"
+              icon={<Phone color="#059669" />}
+              title="Call"
+              subtitle="+966 920 015 795"
+            />
+
+            <LinkButton
+              href="https://api.whatsapp.com/send?phone=966920015795"
+              icon={<WhatsAppIcon size={24} />}
+              title="WhatsApp"
+              subtitle="+966 920 015 795"
+            />
+
+            <LinkButton
+              href="mailto:info@nuqtalabs.com"
+              icon={<Mail color="#DC2626" />}
+              title="Email"
+              subtitle="info@nuqtalabs.com"
+            />
+          </div>
+
+          {/* Footer */}
+          <div className="text-center pt-8">
+            <p className="text-muted-foreground text-xs">
+              © 2024 Nuqta Labs. All rights reserved.
+            </p>
           </div>
         </div>
-        <Footer />
-      </main>
-    </>
+      </div>
+    </div>
   );
 };
 
-export default Linktree;
+export default Index;
