@@ -15,18 +15,16 @@ export const InstagramIcon: React.FC<InstagramIconProps> = ({ size = 24, classNa
       className={className}
     >
       <defs>
-        <radialGradient id="instagram-gradient" cx="0.5" cy="1" r="1.2">
-          <stop offset="0%" stopColor="#fdf497"/>
-          <stop offset="5%" stopColor="#fdf497"/>
-          <stop offset="45%" stopColor="#fd5949"/>
-          <stop offset="60%" stopColor="#d6249f"/>
-          <stop offset="90%" stopColor="#285AEB"/>
-        </radialGradient>
+        <linearGradient id="instagram-gradient" x1="0%" y1="100%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="#E09B3D"/>
+          <stop offset="30%" stopColor="#C74C4D"/>
+          <stop offset="60%" stopColor="#C21975"/>
+          <stop offset="100%" stopColor="#7024C4"/>
+        </linearGradient>
       </defs>
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="url(#instagram-gradient)"/>
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="url(#instagram-gradient)" strokeWidth="1"/>
-      <circle cx="12" cy="12" r="4" stroke="white" strokeWidth="2" fill="none"/>
-      <circle cx="17.5" cy="6.5" r="1.25" fill="white"/>
+      <rect x="1.5" y="1.5" width="21" height="21" rx="6" ry="6" fill="url(#instagram-gradient)" stroke="none"/>
+      <circle cx="12" cy="12" r="5.5" stroke="white" strokeWidth="2.5" fill="none"/>
+      <circle cx="18.5" cy="5.5" r="1.5" fill="white"/>
     </svg>
   );
 };
