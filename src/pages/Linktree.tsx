@@ -3,7 +3,7 @@ import { Starfield } from '@/components/Starfield';
 import { LinkButton } from '@/components/LinkButton';
 import { InstagramIcon } from '@/components/icons/InstagramIcon';
 import { WhatsAppIcon } from '@/components/icons/WhatsAppIcon';
-const nuqtaLabsLogo = '/lovable-uploads/daf9ca9d-0edb-4a9d-b34d-ba48d0e6dec2.png';
+const nuqtaLabsLogo = '/nuqta-labs-logo.png';
 
 const Index = () => {
   return (
@@ -17,7 +17,7 @@ const Index = () => {
             <img 
               src={nuqtaLabsLogo} 
               alt="Nuqta Labs" 
-              className="w-32 h-32 mx-auto mb-4 object-contain filter brightness-200 invert"
+              className="w-32 h-32 mx-auto mb-4 object-contain"
             />
             <h1 className="text-2xl font-bold text-white mb-2">
               Nuqta Labs
