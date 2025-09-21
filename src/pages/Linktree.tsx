@@ -17,12 +17,12 @@ const Index = () => {
             <img 
               src={nuqtaLabsLogo} 
               alt="Nuqta Labs" 
-              className="w-52 h-52 mx-auto mb-4 object-contain filter brightness-110 mix-blend-screen bg-transparent"
+              className="w-32 h-32 mx-auto mb-4 object-contain filter brightness-200 invert"
             />
-            <h1 className="text-2xl font-bold text-foreground mb-2">
+            <h1 className="text-2xl font-bold text-white mb-2">
               Nuqta Labs
             </h1>
-            <p className="text-muted-foreground text-sm">
+            <p className="text-gray-400 text-sm">
               Connect with us across all platforms
             </p>
           </div>
@@ -74,7 +74,7 @@ const Index = () => {
 
           {/* Footer */}
           <div className="text-center pt-8">
-            <p className="text-muted-foreground text-xs">
+            <p className="text-gray-500 text-xs">
               © 2024 Nuqta Labs. All rights reserved.
             </p>
           </div>
